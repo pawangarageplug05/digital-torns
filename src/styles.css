@@ -1,1 +1,66 @@
 /* You can add global styles to this file, and also import other style files */
+
+.header-class{
+    background-image: linear-gradient(to right, #7c4bf3 , #c166e5);
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    color: white;
+    font-size: 1.2rem;
+}
+body{
+    background-color: #f8f6f6 !important;
+}
+.content{
+    margin-top: 2rem;
+}
+.btn-class{
+    text-align: center;
+    padding: .5rem;
+    border: 2px solid #7c4bf3;
+    width: 50%;
+    border-radius: 100px;
+    color: white;
+    margin:1rem;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+background: #7c4bf3;
+
+    margin-left: 25%;
+}
+.selected_Time{
+    background: red;
+    border: 2px solid red;
+
+
+}
+.img-class{
+    width: 200px;
+}
+.form-cl{
+    padding: 1rem;
+    background: white;
+    margin: 1rem;
+    border-radius: .4rem;
+}
+label{
+    font-size: 14px;
+    font-weight: 400;
+}
+.buttons-class{
+    text-align: center;
+}
+.margin-class{
+    margin: 1rem;
+}
+.color-class{
+background: #7c4bf3;
+border: 2px solid #7c4bf3;
+color: white;
+}
+.badge-class{
+    padding: .5rem;
+}
+.center-class{
+    text-align: center;
+}
