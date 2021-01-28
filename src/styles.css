@@ -64,3 +64,26 @@ color: white;
 .center-class{
     text-align: center;
 }
+@media only screen and (min-width: 770px) {
+    .btn-class{
+        text-align: center;
+        padding: .5rem;
+        border: 2px solid #7c4bf3;
+        width: 20%;
+        border-radius: 100px;
+        color: white;
+        margin:1rem;
+        box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    background: #7c4bf3;
+    
+        margin-left: 40%;
+    }
+    .form-cl {
+        padding: 1rem;
+        background: white;
+        margin: 1rem;
+        border-radius: .4rem;
+        width: 50%;
+        margin-left: 25%;
+    }
+  }

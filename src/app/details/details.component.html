@@ -1,15 +1,15 @@
 <div class="form-cl">
     <div class="form-group">
         <label for="exampleInputEmail1">First Name*</label>
-        <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter First Name" [(ngModel)]="firstName" [readonly]="!isReadOnly && timeSlot == userSelectedTimeSlot">
+        <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter First Name" [(ngModel)]="firstName" [readonly]="!isReadOnly && timeSlot == selectedUserTime">
       </div>
       <div class="form-group">
           <label for="exampleInputEmail1">Last Name</label>
-          <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Last Name" [(ngModel)]="lastName" [readonly]="!isReadOnly && timeSlot == userSelectedTimeSlot">
+          <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Last Name" [(ngModel)]="lastName" [readonly]="!isReadOnly && timeSlot == selectedUserTime">
         </div>
         <div class="form-group">
             <label for="exampleInputEmail1">Phone Number*</label>
-            <input type="number" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Phone Number" [(ngModel)]="phoneNumber" [readonly]="!isReadOnly && timeSlot == userSelectedTimeSlot">
+            <input type="number" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Phone Number" [(ngModel)]="phoneNumber" [readonly]="!isReadOnly && timeSlot == selectedUserTime">
           </div>
 
          
@@ -22,7 +22,7 @@
             <div class="input-group">
                 <div class="custom-file">
                   
-                  <input type="file" class="custom-file-input" id="inputGroupFile04" (change)="imageClick($event)">
+                  <input type="file" class="custom-file-input" id="inputGroupFile04" (change)="imageClick($event)" [readonly]="!isReadOnly && timeSlot == selectedUserTime">
                   <label class="custom-file-label" for="inputGroupFile04">Choose file</label>
                 </div>
                
@@ -39,7 +39,7 @@
 <div class="buttons-class">
     <button type="button" class="btn btn-danger btn-lg margin-class" (click)="cancleClick()">Cancel</button>
     <button type="button" class="btn  btn-lg margin-class color-class" (click)="validationClick()" *ngIf="isReadOnly || !isButtonShow ">Save</button>
-    <button type="button" class="btn  btn-lg margin-class color-class" (click)="editClick()" *ngIf="timeSlot == userSelectedTimeSlot && !isReadOnly">Edit</button>
+    <button type="button" class="btn  btn-lg margin-class color-class" (click)="editClick()" *ngIf="timeSlot == selectedUserTime && !isReadOnly">Edit</button>
 
 
 </div>

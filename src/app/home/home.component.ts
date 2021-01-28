@@ -8,16 +8,31 @@ import { Router } from '@angular/router';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-  selecedTime:string
+  selecedTime =[]
   timeSlot = ['9 AM','10 AM','11 AM','12 AM','1 PM','2 PM','3 PM','4 PM','5 PM']
   constructor(public router:Router) {
-    this.selecedTime = localStorage.getItem(Constants.SELECTED_TIME_SLOT)
+    this.selecedTime = JSON.parse(localStorage.getItem(Constants.USER_OBJECT))
    }
 
   ngOnInit() {
   }
   onSelectTimeClick(value){
-    // localStorage.setItem(Constants.SELECTED_TIME_SLOT,value)
     this.router.navigate(['/details'],{state:{time:value}})
+  }
+  onSelecedTimeSlot(time){
+    if(this.selecedTime){
+      let isSelectedTime:boolean = false;
+
+    this.selecedTime.forEach(item=>{
+      if(time == item.selectedTimeSlot){
+        isSelectedTime = true;
+          return isSelectedTime;
+      }
+      
+    })
+    return isSelectedTime;
+
+  }
+
   }
 }

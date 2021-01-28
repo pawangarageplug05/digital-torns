@@ -1,7 +1,7 @@
 
 
   <div class="content">
-<div  *ngFor="let time of timeSlot" class="btn-class" [ngClass]="{'selected_Time': time == selecedTime}" (click)="onSelectTimeClick(time)">
+<div  *ngFor="let time of timeSlot" class="btn-class"  [ngClass]="{'selected_Time':onSelecedTimeSlot(time)}" (click)="onSelectTimeClick(time)">
   {{time}}
 </div>
 </div>
